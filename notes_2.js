@@ -9,9 +9,9 @@ module.exports = {
 	}
 };
 
-function print(let name,let age) {
+function print() {
 	// body...
-	console.log(name '+\'s age is '+ age)
+	console.log("HELLO!")
 }
 
 // print();
