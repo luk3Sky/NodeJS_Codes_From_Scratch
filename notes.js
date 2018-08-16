@@ -36,3 +36,43 @@ setInterval(
 console.log(__dirname);
 console.log(__filename);
 */
+
+
+/******* Basic server skeleton *******
+var http = require('http');
+
+function onReuestServer(request, response) {
+	console.log("Made a request from" + request.url);
+	response.writeHead(200, {"Context-type": "text/plain"});
+	response.write("Here is  your response!");
+	response.end();
+}
+
+http.createServer(onReuestServer).listen(8888);
+console.log("Service started!");
+
+
+*/
+
+var http = require("http");
+var fs = require("fs");
+
+// 404 response
+function send404Response(response) {
+    response.writeHead(404, {"Content-type": "text/plain"});
+    response.write("Error 404 - Page was not found!");
+    response.end();
+}
+
+function onRequestServer(request, response){
+    if ( request.method == "GET" && request.url == "/") {
+        response.writeHead(200, {"Context-type": "text/html"});
+        console.log("request approved!");
+        fs.createReadStream("index.html").pipe(response);
+    }else {
+        send404Response(response);
+    }
+}
+
+http.createServer(onRequestServer).listen(8888);
+console.log("server is now running!");
