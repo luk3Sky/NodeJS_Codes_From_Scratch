@@ -54,6 +54,7 @@ console.log("Service started!");
 
 */
 
+/********* Sample server with 404 error handling *******
 var http = require("http");
 var fs = require("fs");
 
@@ -76,3 +77,28 @@ function onRequestServer(request, response){
 
 http.createServer(onRequestServer).listen(8888);
 console.log("server is now running!");
+
+****/
+
+/********* Sample server with sequenced operations *******
+var connect = require('connect');
+var http = require('http');
+
+var app = connect();
+
+function doFirst(request, response, next) {
+    console.log("First operation");
+    next();
+}
+
+function doSecond(request, response, next) {
+    console.log("Second operation");
+    next();
+}
+app.use(doFirst);
+app.use(doSecond);
+
+http.createServer(app).listen(8888);
+console.log("server is now running!");
+
+****/
