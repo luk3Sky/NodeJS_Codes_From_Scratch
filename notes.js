@@ -102,3 +102,11 @@ http.createServer(app).listen(8888);
 console.log("server is now running!");
 
 ****/
+var http = require("http");
+var connect = require("connect");
+
+function name(params) {
+    console.log("HI!!!");
+}
+
+name();
