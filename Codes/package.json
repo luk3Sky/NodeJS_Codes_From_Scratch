@@ -1,0 +1,14 @@
+{
+  "name": "codes",
+  "version": "1.0.0",
+  "description": "Sample app",
+  "main": "app.js",
+  "scripts": {
+    "test": "app"
+  },
+  "keywords": [
+    "Sample"
+  ],
+  "author": "Luke",
+  "license": "ISC"
+}
