@@ -6,10 +6,11 @@ module.exports = {
 	printAvatar: function(argument) {
 		// body...
 		console.log("AVATAR!")
-	}
+	},
+	print: print
 };
 
-function print() {
+var print = function print() {
 	// body...
 	console.log("HELLO!")
 }

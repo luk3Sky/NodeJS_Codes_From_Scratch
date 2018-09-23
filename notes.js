@@ -13,9 +13,10 @@ te.printAvatar();
 
 
 /******** work with predefined core modules ********
-var fs = require("fs");      // fileSync
-var path = require("path");	 // path
-var http = require("http");  // http
+var fs = require("fs");         // fileSync
+var path = require("path");	    // path
+var http = require("http");     // http
+var events = require("events"); // events
 
 fs.writeFileSync("new.txt", "Damn!!!!");
 console.log(fs.readFileSync("new.txt").toString());
@@ -104,11 +105,8 @@ console.log("server is now running!");
 
 ****/
 
-var http = require("http");
-var connect = require("connect");
-
-function name(params) {
-    console.log("HI!!!");
+var adder = function(a,b) {
+    return `The sum of the two numbers is ${a+b}`;
 }
 
-name();
+module.exports = adder;

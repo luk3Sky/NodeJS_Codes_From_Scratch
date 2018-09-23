@@ -1,3 +1,9 @@
-console.log("Hello prens");
+var events = require('events');
 
-console.log(__filename);
+var myEmitter = new events.EventEmitter();
+
+myEmitter.on('someEvent', function (msg) {
+    console.log(msg);
+});
+
+myEmitter.emit('someEvent', "Something just happened!");
