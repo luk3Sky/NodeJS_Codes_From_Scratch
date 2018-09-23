@@ -10,8 +10,9 @@
     "Sample"
   ],
   "author": "Luke",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "node.js": "^8.11.3"
   }
 }

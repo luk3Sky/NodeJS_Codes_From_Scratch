@@ -12,7 +12,7 @@ app.get('/contact', function(request, response){
 
 app.listen(3000);
 var time = 0;
-setInterval(){
+setInterval(function(){
     time += 2;
     console.log(time + " seconds have passed.");
-}
+},2000);
