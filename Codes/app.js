@@ -1,14 +1,13 @@
-console.log(__dirname);
-console.log(__filename);
+var express = require('express');
 
-/*
-var time = 0;
-var timer = setInterval(function(){
-    time += 2;
-    console.log(time + " seconds have passed.");
+var app = express();
 
-    if (time >= 10){
-        clearInterval(timer);
-    }
-}, 2000);
-*/
+app.get('/', function(request, response){
+    response.send('This is the homepage!');
+});
+
+app.get('/contact', function(request, response){
+    response.send('This is the contact page!');
+});
+
+app.listen(3000);

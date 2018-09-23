@@ -30,6 +30,7 @@ setInterval(
 	}
 
 , 2000);
+
 */
 
 /********** print working directory **********
@@ -102,6 +103,7 @@ http.createServer(app).listen(8888);
 console.log("server is now running!");
 
 ****/
+
 var http = require("http");
 var connect = require("connect");
 

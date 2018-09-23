@@ -10,5 +10,8 @@
     "Sample"
   ],
   "author": "Luke",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
