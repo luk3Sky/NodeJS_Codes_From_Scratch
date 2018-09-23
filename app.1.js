@@ -11,3 +11,8 @@ app.get('/contact', function(request, response){
 });
 
 app.listen(3000);
+var time = 0;
+setInterval(){
+    time += 2;
+    console.log(time + " seconds have passed.");
+}
